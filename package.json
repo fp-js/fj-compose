@@ -33,7 +33,5 @@
     "gulp-watch": "^4.1.0",
     "mochify": "^2.2.0"
   },
-  "dependencies": {
-    "fj-pipe": "^1.0.4"
-  }
+  "dependencies": {}
 }

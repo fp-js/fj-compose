@@ -1,4 +1,5 @@
-const pipe = require('fj-pipe').pipe;
+let compose = (...fns) =>
+  fns.reduce((f,g) => (...args) =>
+  f(g.apply(null,args)));
 
-export default (...fns) =>
-  pipe.apply(null, fns.reverse());
+export default compose;

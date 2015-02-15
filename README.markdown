@@ -17,13 +17,16 @@ mult2 = (x) => x * 2,
 square = (x) => x * x;
 
 const compose1 = compose(add1),
-compose2 = compose(add1, mult2),
-compose3 = compose(add1, mult2, square);
+compose2 = compose(mult2, add1),
+compose3 = compose(square, mult2, add1);
 
 compose1(0); // 1
+// === add1(0)
 
 compose2(1); // 4
+// === mult2(add1(0))
 
 compose3(1); // 16
+// === square(mult2(add1(0)))
 
 ```

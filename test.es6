@@ -6,8 +6,8 @@ const add1 = (x) => x + 1,
   square = (x) => x * x;
 
 const compose1 = compose(add1),
-  compose2 = compose(add1, mult2),
-  compose3 = compose(add1, mult2, square);
+  compose2 = compose(mult2, add1),
+  compose3 = compose(square, mult2, add1);
 
 
 it('fj-compose', () => {
